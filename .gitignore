@@ -1,0 +1,5 @@
+Pictures
+.codex-temp/
+.vercel/
+node_modules/
+dist/

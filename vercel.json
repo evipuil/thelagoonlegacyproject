@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/psol/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/brevard/psol/:path*"
+    },
+    {
+      "source": "/blackout/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/brevard/blackout/:path*"
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/brevard/:path*"
+    }
+  ]
+}
