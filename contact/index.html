@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | The Lagoon Legacy Project</title>
+  <meta name="description" content="Contact The Lagoon Legacy Project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head solid" id="header">
+    <div class="site-head-inner">
+      <a class="logo" href="/"><span>The Lagoon Legacy Project</span> Contact</a>
+      <nav class="nav-main" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/brevard/">Brevard</a>
+        <a href="/brevard/psol/">Project: Save Our Lagoon</a>
+        <a href="/brevard/blackout/">Project: BLACKOUT</a>
+        <a href="/team/">Team</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section paper" style="padding-top:8rem;">
+      <div class="wrap contact-layout reveal">
+        <aside class="contact-panel">
+          <p class="section-label">Contact us</p>
+          <h1 style="margin:0 0 1rem;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.6rem,6vw,4.5rem);line-height:.95;">Reach the project.</h1>
+          <p>Send a county-specific note, partnership idea, student chapter question, or general message.</p>
+          <div class="contact-list">
+            <a href="mailto:thelagoonlegacyproject@gmail.com">thelagoonlegacyproject@gmail.com</a>
+            <a href="https://www.instagram.com/save_our_lagoon" target="_blank" rel="noreferrer">@save_our_lagoon</a>
+          </div>
+        </aside>
+
+        <section class="contact-panel">
+          <h3>Message form</h3>
+          <form class="contact-form" data-contact-form>
+            <div class="field">
+              <label for="county">County</label>
+              <select id="county" name="county" required>
+                <option value="">Select a county</option>
+                <option>Brevard</option>
+                <option>Indian River</option>
+                <option>Volusia</option>
+                <option>Martin</option>
+                <option>Orange</option>
+                <option>St. Lucie</option>
+                <option>Palm Beach</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Write your message here."></textarea>
+            </div>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email">
+            </div>
+            <button class="btn btn-fill" type="submit">Send message</button>
+            <p class="form-status" data-contact-status aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><strong>The Lagoon Legacy Project</strong> thelagoonlegacyproject@gmail.com</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/brevard/">Brevard</a>
+        <a href="/team/">Team</a>
+        <a href="https://www.instagram.com/save_our_lagoon" target="_blank" rel="noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/contact.js"></script>
+</body>
+</html>

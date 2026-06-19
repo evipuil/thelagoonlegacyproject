@@ -13,6 +13,16 @@
       "destination": "/brevard/blackout/:path*"
     },
     {
+      "source": "/contact/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/contact/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/api/:path*"
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
       "destination": "/brevard/:path*"

@@ -68,12 +68,24 @@ a { color: inherit; }
   gap: 1.5rem;
 }
 .logo {
+  display: inline-grid;
+  grid-template-columns: 44px auto;
+  align-items: center;
+  column-gap: 0.7rem;
   text-decoration: none;
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.1em;
   font-size: 0.72rem;
   text-transform: uppercase;
+}
+.logo::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff url("/assets/img/lagoon-legacy-mark.png") center / 112% auto no-repeat;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 .logo span {
   display: block;
@@ -296,6 +308,23 @@ a { color: inherit; }
   color: var(--muted);
   font-size: 1.02rem;
   line-height: 1.8;
+}
+.brand-showcase {
+  display: grid;
+  gap: 1rem;
+}
+.brand-logo-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+.brand-logo-card img {
+  width: min(100%, 520px);
+  margin: 0 auto;
+}
+.brand-logo-card.mark img {
+  width: min(72%, 280px);
 }
 .dark .copy p,
 .dark p,
@@ -525,6 +554,150 @@ a { color: inherit; }
   justify-content: center;
 }
 
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 2rem;
+  align-items: start;
+}
+.contact-panel {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.contact-panel h3 {
+  margin: 0 0 0.75rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+.contact-panel p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+.contact-list {
+  display: grid;
+  gap: 0.75rem;
+}
+.contact-list a {
+  color: var(--sea);
+  font-weight: 700;
+  word-break: break-word;
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+.field label {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--slate);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  padding: 0.85rem 0.9rem;
+}
+.field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.form-status {
+  min-height: 1.5rem;
+  margin: 0;
+  color: var(--muted);
+  font-weight: 700;
+}
+.form-status.success { color: var(--sea); }
+.form-status.error { color: #b64224; }
+
+.team-hero-logo {
+  width: min(100%, 420px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem;
+}
+.team-grid-page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.member-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.member-photo,
+.member-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.member-photo {
+  object-fit: cover;
+}
+.member-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, rgba(42, 107, 122, 0.16), rgba(224, 99, 45, 0.12)),
+    var(--sand);
+  color: var(--ocean);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3.5rem, 9vw, 5.5rem);
+  font-weight: 700;
+}
+.member-body {
+  padding: 1.35rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.member-body h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.05;
+}
+.member-role {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.member-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+.source-link {
+  color: var(--sea);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.source-link:hover { text-decoration: underline; }
+
 footer {
   background: var(--deep);
   color: rgba(255, 255, 255, 0.64);
@@ -574,12 +747,14 @@ footer {
   .pillar-grid,
   .stats-row,
   .card-grid,
-  .county-grid {
+  .county-grid,
+  .team-grid-page {
     grid-template-columns: repeat(2, 1fr);
   }
   .split,
   .feature-band,
   .project-grid,
+  .contact-layout,
   .quote-block {
     grid-template-columns: 1fr;
   }
@@ -599,6 +774,14 @@ footer {
   .site-head-inner {
     min-height: auto;
     display: block;
+  }
+  .logo {
+    grid-template-columns: 38px auto;
+    column-gap: 0.55rem;
+  }
+  .logo::before {
+    width: 38px;
+    height: 38px;
   }
   .nav-main {
     margin-top: 0.8rem;
@@ -621,7 +804,8 @@ footer {
   .stats-row,
   .card-grid,
   .county-grid,
-  .project-grid {
+  .project-grid,
+  .team-grid-page {
     grid-template-columns: 1fr;
   }
   .pillar { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
