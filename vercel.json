@@ -18,6 +18,11 @@
       "destination": "/contact/:path*"
     },
     {
+      "source": "/chapter-application/:path*",
+      "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
+      "destination": "/chapter-application/:path*"
+    },
+    {
       "source": "/api/:path*",
       "has": [{ "type": "host", "value": "brevard.thelagoonlegacyproject.org" }],
       "destination": "/api/:path*"

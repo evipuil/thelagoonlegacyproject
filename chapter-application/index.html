@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter Leader Application | The Lagoon Legacy Project</title>
+  <meta name="description" content="Apply to become a chapter leader for The Lagoon Legacy Project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-head solid" id="header">
+    <div class="site-head-inner">
+      <a class="logo" href="/"><span>The Lagoon Legacy Project</span> Chapter leader application</a>
+      <nav class="nav-main" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/brevard/">Brevard</a>
+        <a href="/team/">Team</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section paper" style="padding-top:8rem;">
+      <div class="wrap contact-layout reveal">
+        <aside class="contact-panel">
+          <p class="section-label">Chapter leadership</p>
+          <h1 style="margin:0 0 1rem;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(2.6rem,6vw,4.5rem);line-height:.95;">Apply to lead locally.</h1>
+          <p>Chapter leaders organize local conservation outreach, recruit student collaborators, and connect county work back to The Lagoon Legacy Project.</p>
+          <p>Use this form for county chapter leadership interest. General messages can still go through the contact page.</p>
+          <p><a class="source-link" href="/contact/">General contact form</a></p>
+        </aside>
+
+        <section class="contact-panel">
+          <h3>Application</h3>
+          <form class="contact-form" data-chapter-form>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="county">County</label>
+              <select id="county" name="county" required>
+                <option value="">Select a county</option>
+                <option>Brevard</option>
+                <option>Indian River</option>
+                <option>Volusia</option>
+                <option>Martin</option>
+                <option>Orange</option>
+                <option>St. Lucie</option>
+                <option>Palm Beach</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="school">School or organization</label>
+              <input id="school" name="school" type="text" required>
+            </div>
+            <div class="field">
+              <label for="role">Role you are interested in</label>
+              <select id="role" name="role">
+                <option>Chapter President</option>
+                <option>Chapter Vice-President</option>
+                <option>Outreach Lead</option>
+                <option>Project Lead</option>
+                <option>Volunteer</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Why do you want to lead a chapter?</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your county, your interest in lagoon work, and any project ideas."></textarea>
+            </div>
+            <button class="btn btn-fill" type="submit">Submit application</button>
+            <p class="form-status" data-chapter-status aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand"><strong>The Lagoon Legacy Project</strong> thelagoonlegacyproject@gmail.com</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/team/">Team</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/assets/site.js"></script>
+  <script src="/assets/chapter-application.js"></script>
+</body>
+</html>

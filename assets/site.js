@@ -1,6 +1,7 @@
 const header = document.getElementById("header");
 if (header) {
-  const onScroll = () => header.classList.toggle("solid", window.scrollY > 80);
+  const alwaysSolid = header.classList.contains("solid");
+  const onScroll = () => header.classList.toggle("solid", alwaysSolid || window.scrollY > 80);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 }
