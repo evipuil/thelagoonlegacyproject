@@ -91,6 +91,7 @@ a { color: inherit; }
 }
 .logo span {
   display: block;
+  margin-bottom: 0.3rem;
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 1.35rem;
   text-transform: none;
@@ -426,7 +427,7 @@ a { color: inherit; }
 }
 .feature-panel {
   background: transparent;
-  color: #fff;
+  color: var(--ink);
   padding: 0;
   border-radius: 0;
   display: flex;
@@ -442,6 +443,14 @@ a { color: inherit; }
   font-weight: 600;
 }
 .feature-panel p {
+  color: var(--muted);
+}
+.dark .feature-panel,
+.ocean .feature-panel {
+  color: #fff;
+}
+.dark .feature-panel p,
+.ocean .feature-panel p {
   color: rgba(255, 255, 255, 0.75);
 }
 .feature-image {
