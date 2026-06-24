@@ -278,7 +278,7 @@ a { color: inherit; }
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 .section.paper { background: var(--paper); }
 .section.sand { background: var(--sand); }
@@ -433,7 +433,7 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 420px;
+  min-height: 340px;
 }
 .feature-panel h3 {
   margin: 0.5rem 0 1rem;
@@ -456,10 +456,47 @@ a { color: inherit; }
 .feature-image {
   border-radius: 0;
   overflow: hidden;
-  min-height: 420px;
+  min-height: 340px;
 }
 .feature-image img {
   height: 100%;
+}
+.editorial-figure {
+  margin: 1.5rem 0 0;
+}
+.editorial-figure img {
+  width: 100%;
+  height: clamp(260px, 38vw, 480px);
+  object-fit: cover;
+}
+.editorial-figure.compact img {
+  height: clamp(240px, 30vw, 360px);
+}
+.editorial-figure figcaption {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+.dark .editorial-figure figcaption,
+.ocean .editorial-figure figcaption {
+  color: rgba(255, 255, 255, 0.58);
+}
+.editorial-figure figcaption a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.photo-copy-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+.photo-copy-band.reverse {
+  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1.05fr);
+}
+.photo-copy-band > .editorial-figure {
+  margin: 0;
 }
 
 .timeline {
@@ -565,7 +602,7 @@ a { color: inherit; }
 }
 
 .closing {
-  padding: 5rem 0;
+  padding: 4rem 0;
   background: var(--slate);
   color: #fff;
   text-align: center;
@@ -788,6 +825,8 @@ footer {
   }
   .split,
   .feature-band,
+  .photo-copy-band,
+  .photo-copy-band.reverse,
   .project-grid,
   .contact-layout,
   .quote-block {
@@ -795,7 +834,7 @@ footer {
   }
   .feature-panel,
   .feature-image {
-    min-height: 320px;
+    min-height: 280px;
   }
 }
 
@@ -856,6 +895,6 @@ footer {
     width: 96px;
   }
   .pillar { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .section { padding: 3.6rem 0; }
+  .section { padding: 3rem 0; }
   .project-card img { height: 230px; }
 }
