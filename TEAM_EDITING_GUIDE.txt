@@ -1,0 +1,127 @@
+THE LAGOON LEGACY PROJECT — TEAM PAGE EDITING GUIDE
+===================================================
+
+The Team page is now managed from one file:
+
+    assets/team-data.js
+
+You normally do NOT need to edit team/index.html to add or change officers.
+
+
+ADD A GENERAL LEADERSHIP OFFICER
+--------------------------------
+Open assets/team-data.js and find:
+
+    generalLeadership: [
+
+Copy one complete officer block, paste it before the closing ], and change the fields.
+
+Example:
+
+    {
+      name: "Jane Smith",
+      role: "Outreach Director",
+      bio: "Jane coordinates organization-wide outreach and partner communication.",
+      photo: "",
+      links: [
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/jane-smith" }
+      ]
+    },
+
+
+ADD A CHAPTER OFFICER
+---------------------
+Find the chapter inside:
+
+    chapters: [
+
+Then add a new officer inside that chapter's officers: [ ... ] list.
+
+Example:
+
+    {
+      name: "Jane Smith",
+      role: "Vice President",
+      bio: "Jane supports Martin County outreach and local project coordination.",
+      photo: "",
+      links: [
+        { label: "LinkedIn", url: "https://www.linkedin.com/in/jane-smith" }
+      ]
+    },
+
+The Team page will automatically:
+- create the card;
+- generate initials if no photo is supplied;
+- include the person in leadership search;
+- include them in the correct chapter;
+- show profile links only when they exist.
+
+
+ADD A LINKEDIN OR OTHER PROFILE LINK
+------------------------------------
+Inside the person's links list, use:
+
+    links: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/example" }
+    ]
+
+For multiple links:
+
+    links: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/example" },
+      { label: "Website", url: "https://example.org" }
+    ]
+
+If the person has no links, use:
+
+    links: []
+
+
+ADD A PHOTO
+-----------
+1. Put the image in:
+
+    assets/img/team/
+
+2. Give it a simple filename, for example:
+
+    jane-smith.jpg
+
+3. Change the person's photo field to:
+
+    photo: "/assets/img/team/jane-smith.jpg"
+
+If photo is blank, the site automatically displays the person's initials.
+If the image path is wrong or the image fails to load, the site automatically falls back to initials.
+
+
+ADD A NEW CHAPTER
+-----------------
+Inside chapters: [ ... ], copy an entire chapter block and change:
+
+    id: "martin",
+    name: "Martin County",
+    label: "Martin County Chapter",
+    status: "Forming",
+
+The chapter dropdown is generated automatically, so you do not need to edit the HTML filter.
+
+Use a short lowercase id with no spaces, such as:
+- brevard
+- martin
+- stlucie
+- palmbeach
+
+
+REMOVE AN OFFICER
+-----------------
+Delete that person's complete { ... } block from assets/team-data.js.
+
+
+IMPORTANT
+---------
+Keep commas between officer blocks. The easiest method is to copy an existing working block and edit its values rather than typing one from scratch.
+
+Test changes using START_LOCAL_PREVIEW.bat and refresh:
+
+    http://localhost:8000/team/
