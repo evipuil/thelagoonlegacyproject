@@ -1073,3 +1073,158 @@ footer {
   .section { padding: 3rem 0; }
   .project-card img { height: 230px; }
 }
+
+
+/* Team leadership directory */
+.leadership-section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 2rem 4rem;
+  align-items: end;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.leadership-section-head h2,
+.chapter-group-head h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  line-height: 1.05;
+}
+.leadership-section-head h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.leadership-section-head > p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 44rem;
+}
+.leadership-primary {
+  margin-top: 0;
+}
+.leadership-photo {
+  margin-top: 2.5rem;
+}
+.chapter-leadership-head {
+  margin-bottom: 1.6rem;
+}
+.leadership-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.7fr);
+  gap: 1rem 1.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.leadership-control {
+  display: grid;
+  gap: 0.45rem;
+}
+.leadership-control label {
+  color: var(--slate);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.leadership-control input,
+.leadership-control select {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid rgba(18, 24, 28, 0.18);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  padding: 0.75rem 0.85rem;
+  outline: none;
+}
+.leadership-control input::placeholder {
+  color: #7c888f;
+}
+.leadership-control input:focus,
+.leadership-control select:focus {
+  border-color: var(--sea);
+  box-shadow: 0 0 0 3px rgba(42, 107, 122, 0.12);
+}
+.leadership-status {
+  min-height: 1.3rem;
+  margin: 0.7rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.chapter-directory {
+  margin-top: 0.35rem;
+}
+.chapter-group {
+  padding-top: 2.9rem;
+}
+.chapter-group + .chapter-group {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.chapter-group[hidden],
+.member-card[hidden],
+.leadership-empty[hidden] {
+  display: none !important;
+}
+.chapter-group-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-end;
+  margin-bottom: 0.8rem;
+}
+.chapter-group-head h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+.chapter-group-head .section-label {
+  margin-bottom: 0.45rem;
+}
+.chapter-group-head .tag {
+  margin-bottom: 0.45rem;
+  white-space: nowrap;
+}
+.leadership-empty {
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 600;
+}
+.inline-actions {
+  margin-top: 1.4rem;
+}
+.btn-ghost-dark {
+  border: 1px solid rgba(18, 24, 28, 0.24);
+  color: var(--ink);
+  background: transparent;
+}
+.btn-ghost-dark:hover {
+  border-color: var(--ink);
+}
+.martin-leadership-list {
+  margin-top: 0;
+}
+
+@media (max-width: 780px) {
+  .leadership-section-head,
+  .leadership-toolbar {
+    grid-template-columns: 1fr;
+  }
+  .leadership-section-head {
+    gap: 0.8rem;
+  }
+  .chapter-group-head {
+    align-items: flex-start;
+  }
+}
+
+/* Team profile links */
+.member-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  align-items: center;
+}

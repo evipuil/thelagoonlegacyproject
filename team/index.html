@@ -6,7 +6,7 @@
   <link rel="icon" href="/assets/img/lagoon-legacy-mark.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/lagoon-legacy-mark.png">
   <title>Team | The Lagoon Legacy Project</title>
-  <meta name="description" content="Meet the student leaders behind The Lagoon Legacy Project and the roles they play in the Brevard chapter.">
+  <meta name="description" content="Meet the general leadership and county chapter officers behind The Lagoon Legacy Project.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
       <nav class="nav-main" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/brevard/">Brevard</a>
+        <a href="/martin/">Martin</a>
         <a href="/brevard/psol/">Project: Save Our Lagoon</a>
         <a href="/brevard/blackout/">Project: BLACKOUT</a>
         <a href="/contact/" class="nav-cta">Contact</a>
@@ -35,8 +36,8 @@
           <h1 class="page-title large">Meet the team.</h1>
         </div>
         <div class="copy">
-          <p>The Lagoon Legacy Project is run by students who organize classroom outreach, build project materials, and coordinate county chapters.</p>
-          <p>Everyone listed here has a specific role — documentation, communication, budget tracking, or local Brevard coordination.</p>
+          <p>The Lagoon Legacy Project is led by students who coordinate organization-wide work, develop project resources, and support county chapters.</p>
+          <p>General leadership is listed first. Chapter officers are organized by county below and can be searched by name, role, or chapter.</p>
           <div class="team-hero-logo">
             <img src="/assets/img/lagoon-legacy-logo.jpg" alt="The Lagoon Legacy Project logo">
           </div>
@@ -44,70 +45,52 @@
       </div>
     </section>
 
-    <section class="section sand">
+    <section class="section sand" aria-labelledby="general-leadership-heading">
       <div class="wrap reveal">
-        <figure class="editorial-figure compact team-grid-photo">
+        <div class="leadership-section-head">
+          <div>
+            <p class="section-label">General leadership</p>
+            <h2 id="general-leadership-heading">Organization-wide leadership.</h2>
+          </div>
+          <p>The officers and technical leadership responsible for the project as a whole.</p>
+        </div>
+
+        <div class="team-grid-page leadership-primary" data-general-leadership></div>
+        <noscript><p class="leadership-empty">JavaScript is required to display the leadership directory.</p></noscript>
+
+        <figure class="editorial-figure compact team-grid-photo leadership-photo">
           <img src="/assets/img/psol-card.jpg" alt="Students gathered during a Project: Save Our Lagoon activity">
           <figcaption>West Shore students during Project: Save Our Lagoon classroom outreach.</figcaption>
         </figure>
-        <div class="team-grid-page">
-        <article class="member-card">
-          <div class="member-placeholder" aria-hidden="true">SV</div>
-          <div class="member-body">
-            <p class="member-role">Co-President</p>
-            <h3>Shriya Varada</h3>
-            <p>Shriya helps guide chapter planning and keeps the student outreach organized.</p>
-          </div>
-        </article>
+      </div>
+    </section>
 
-        <article class="member-card">
-          <img class="member-photo" src="/assets/img/team/eshan-vipuil.jpg" alt="Eshan Vipuil">
-          <div class="member-body">
-            <p class="member-role">Co-President</p>
-            <h3>Eshan Vipuil</h3>
-            <p>Eshan helps direct project development, research-backed outreach, and chapter documentation. He is also a senior at West Shore and stays involved in biomedical engineering research and math circle community service outreach.</p>
-            <a class="source-link" href="https://www.linkedin.com/in/eshan-vipuil-8042952a3" target="_blank" rel="noreferrer">LinkedIn</a>
+    <section class="section paper" aria-labelledby="chapter-leadership-heading">
+      <div class="wrap reveal">
+        <div class="leadership-section-head chapter-leadership-head">
+          <div>
+            <p class="section-label">Chapter leadership</p>
+            <h2 id="chapter-leadership-heading">County officers.</h2>
           </div>
-        </article>
+          <p>Search the current chapter directory or narrow the list to a specific county.</p>
+        </div>
 
-        <article class="member-card">
-          <div class="member-placeholder" aria-hidden="true">JK</div>
-          <div class="member-body">
-            <p class="member-role">Treasurer</p>
-            <h3>Joseph Konathapally</h3>
-            <p>Joseph manages budget planning, supply tracking, and project records for the Brevard chapter.</p>
+        <div class="leadership-toolbar" role="search" aria-label="Search chapter leadership">
+          <div class="leadership-control leadership-search-control">
+            <label for="leadership-search">Search leadership</label>
+            <input id="leadership-search" type="search" placeholder="Search by name, role, or chapter" autocomplete="off" data-leadership-search>
           </div>
-        </article>
+          <div class="leadership-control">
+            <label for="leadership-chapter">Chapter</label>
+            <select id="leadership-chapter" data-leadership-chapter>
+              <option value="all">All chapters</option>
+            </select>
+          </div>
+        </div>
+        <p class="leadership-status" data-leadership-status aria-live="polite"></p>
 
-        <article class="member-card">
-          <div class="member-placeholder" aria-hidden="true">RS</div>
-          <div class="member-body">
-            <p class="member-role">Secretary</p>
-            <h3>Raaha Sellamuthu</h3>
-            <p>Raaha organizes meeting notes, chapter communication, and outreach materials so the work stays easy to follow.</p>
-            <a class="source-link" href="https://www.linkedin.com/in/raaha-sellamuthu" target="_blank" rel="noreferrer">LinkedIn profile</a>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="member-placeholder" aria-hidden="true">FA</div>
-          <div class="member-body">
-            <p class="member-role">Brevard Chapter President</p>
-            <h3>Faizan Ahmed</h3>
-            <p>Faizan coordinates Brevard chapter activity and local outreach for The Lagoon Legacy Project.</p>
-            <a class="source-link" href="https://www.linkedin.com/in/thefaizanak/" target="_blank" rel="noreferrer">LinkedIn profile</a>
-          </div>
-        </article>
-
-        <article class="member-card">
-          <div class="member-placeholder" aria-hidden="true">SK</div>
-          <div class="member-body">
-            <p class="member-role">Brevard Chapter Vice-President</p>
-            <h3>Sankeerth Kesireddy</h3>
-            <p>Sankeerth helps with chapter coordination, outreach planning, and day-to-day project logistics.</p>
-            <a class="source-link" href="https://www.linkedin.com/in/sankeerth-kesireddy-226b07376" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </article>
+        <div class="chapter-directory" data-leadership-directory>
+          <p class="leadership-empty" data-leadership-empty hidden>No chapter officers match that search.</p>
         </div>
       </div>
     </section>
@@ -119,10 +102,13 @@
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="/brevard/">Brevard</a>
+        <a href="/martin/">Martin</a>
         <a href="/contact/">Contact</a>
       </div>
     </div>
   </footer>
+  <script src="/assets/team-data.js"></script>
+  <script src="/assets/team-directory.js"></script>
   <script src="/assets/site.js"></script>
 </body>
 </html>
